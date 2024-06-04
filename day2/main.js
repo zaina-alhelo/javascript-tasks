@@ -53,7 +53,7 @@ score = 45;
 if (score <= 50) {
     console.log("You failed the test");
 }
-//Question 8 
+//Question 8
 Name = "John";
 if (Name == "John") {
     console.log("Hello,"+Name)
@@ -111,3 +111,4 @@ if (n <= 1) {
 if (f == 0) {
     console.log(true);
 }
+
