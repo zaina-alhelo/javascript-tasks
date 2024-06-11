@@ -1,7 +1,7 @@
 //task 1
 let header = document.getElementById("header");
 header.innerHTML = "Welcome to DOM Manipulation!";
-header.style.color="pink"
+header.style.color = "pink";
 
 
 //task2
@@ -13,8 +13,10 @@ for (let i = 0; i < element.length; i++) {
 
 //task 3
 let tags = document.getElementsByTagName("p")
-for (let i in tags) {
-    tags[i].innerHTML = "Paragraph Element";
+for (let i = 0; i < tags.length;i++) {
+  tags[i].innerHTML = "Paragraph Element";
+  tags[i].style.fontSize = "20px";
+  tags[i].style.fontSize = "20px";
 }
 
 //task4
@@ -49,8 +51,7 @@ document.querySelector(".container a").textContent = "Combining Selectors ";
 document.querySelector("[data-role='admin']").textContent = "Admin Role";
 
 //task 10
-let section = document.getElementsByTagName("section")[0];
-let span =section.getElementsByTagName('span')
+let section = document.getElementsByTagName("section");
 console.log(span);
 for (let i in span) {
     span[i].innerHTML = "Span Element";
