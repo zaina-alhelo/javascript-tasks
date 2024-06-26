@@ -146,8 +146,8 @@
 //               <h4>Title: ${post.title}</h4>
 //               <p>${post.body}</p>
 //               <p>Posted by: ${user.name} (${user.email})</p>
-//               <button onclick="fetchComments(${post.id})">Load Comments</button>
-//               <div id="comments-${post.id}" class="comments"></div>
+//               <button onclick="fetchComments(${post.id})">Fitch Comments</button>
+//               <div id="${post.id}" class="comments"></div>
 //             `;
 //             postsContainer.appendChild(postElement);
 //           }
@@ -158,7 +158,7 @@
 //   .catch((error) => console.error("Error fetching posts:", error));
 
 // function fetchComments(postId) {
-//   let commentsDiv = document.getElementById(`comments-${postId}`);
+//   let commentsDiv = document.getElementById(`${postId}`);
 //   fetch(`https://jsonplaceholder.typicode.com/comments?postId=${postId}`)
 //     .then((response) => response.json())
 //     .then((comments) => {
@@ -166,7 +166,7 @@
 //       comments.forEach((comment) => {
 //         let commentElement = document.createElement("div");
 //         commentElement.innerHTML = `
-//           <p><strong>${comment.name}</strong> (${comment.email})</p>
+//           <p>name :${comment.name} email :${comment.email}</p>
 //           <p>${comment.body}</p>
 //         `;
 //         commentsDiv.appendChild(commentElement);
