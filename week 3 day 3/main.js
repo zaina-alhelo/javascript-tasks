@@ -118,3 +118,61 @@
 //   .catch((error) => {
 //     console.error("Error:", error);
 //   });
+
+
+
+//Task 7
+
+
+// let postsContainer = document.getElementById("posts");
+
+// fetch("https://jsonplaceholder.typicode.com/posts")
+//   .then((response) => response.json())
+//   .then((posts) => {
+//     fetch("https://jsonplaceholder.typicode.com/users")
+//       .then((response) => response.json())
+//       .then((users) => {
+//         posts.forEach((post) => {
+//           let user = null;
+//           for (let i = 0; i < users.length; i++) {
+//             if (users[i].id === post.userId) {
+//               user = users[i];
+//               break;
+//             }
+//           }
+//           if (user) {
+//             let postElement = document.createElement("div");
+//             postElement.innerHTML = `
+//               <h4>Title: ${post.title}</h4>
+//               <p>${post.body}</p>
+//               <p>Posted by: ${user.name} (${user.email})</p>
+//               <button onclick="fetchComments(${post.id})">Load Comments</button>
+//               <div id="comments-${post.id}" class="comments"></div>
+//             `;
+//             postsContainer.appendChild(postElement);
+//           }
+//         });
+//       })
+//       .catch((error) => console.error("Error fetching users:", error));
+//   })
+//   .catch((error) => console.error("Error fetching posts:", error));
+
+// function fetchComments(postId) {
+//   let commentsDiv = document.getElementById(`comments-${postId}`);
+//   fetch(`https://jsonplaceholder.typicode.com/comments?postId=${postId}`)
+//     .then((response) => response.json())
+//     .then((comments) => {
+//       commentsDiv.innerHTML = "<h3>Comments:</h3>";
+//       comments.forEach((comment) => {
+//         let commentElement = document.createElement("div");
+//         commentElement.innerHTML = `
+//           <p><strong>${comment.name}</strong> (${comment.email})</p>
+//           <p>${comment.body}</p>
+//         `;
+//         commentsDiv.appendChild(commentElement);
+//       });
+//     })
+//     .catch((error) =>
+//       console.error(`Error fetching comments for post ${postId}:`, error)
+//     );
+// }
